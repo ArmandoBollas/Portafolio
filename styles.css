@@ -1,0 +1,221 @@
+/* Custom styles for CRM application - Dark/Light Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Dark Theme (Default) */
+body.dark-theme {
+    background-color: #0f0f0f !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .sidebar {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+body.dark-theme .card {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .navbar {
+    background-color: #1a1a1a !important;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-theme .form-control, 
+body.dark-theme .form-select {
+    background-color: #2a2a2a !important;
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .table {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .table-light {
+    background-color: #2a2a2a !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .modal-content {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333 !important;
+}
+
+body.dark-theme .dropdown-menu {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333 !important;
+}
+
+body.dark-theme .dropdown-item {
+    color: #e0e0e0 !important;
+}
+
+body.dark-theme .dropdown-item:hover {
+    background-color: #2a2a2a !important;
+    color: #4a90e2 !important;
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: #f8f9fa !important;
+    color: #212529 !important;
+}
+
+body.light-theme .sidebar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+body.light-theme .card {
+    background-color: #ffffff !important;
+    border: 1px solid #dee2e6 !important;
+    color: #212529 !important;
+}
+
+body.light-theme .navbar {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Common Styles */
+.sidebar {
+    min-height: 100vh;
+    transition: width 0.3s ease;
+    width: 280px;
+    position: relative;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.hamburger-menu {
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    background: #4a90e2;
+    border: none;
+    border-radius: 8px;
+    width: 40px;
+    height: 30px;
+    color: white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-line {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 2px 0;
+    transition: 0.3s;
+}
+
+.settings-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #4a90e2;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    z-index: 1001;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+.user-profile {
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.sidebar-item {
+    transition: all 0.3s ease;
+    margin: 0.25rem 0;
+    border-radius: 8px;
+}
+
+.sidebar-item:hover {
+    background-color: rgba(74, 144, 226, 0.2);
+    transform: translateX(5px);
+}
+
+.sidebar-item.active {
+    background-color: #4a90e2;
+    color: white !important;
+}
+
+.card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+}
+
+.text-visible {
+    color: #b8b8b8 !important;
+}
+
+body.light-theme .text-visible {
+    color: #6c757d !important;
+}
+
+.navbar-brand {
+    color: #4a90e2 !important;
+}
+
+.btn-primary {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+.btn-primary:hover {
+    background-color: #357abd;
+    border-color: #357abd;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #4a90e2 !important;
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+.text-primary {
+    color: #4a90e2 !important;
+}
+
+.login-container {
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 50%, #16213e 100%);
+    min-height: 100vh;
+}
+
+.login-card {
+    backdrop-filter: blur(10px);
+    background: rgba(26, 26, 26, 0.95) !important;
+    border: 1px solid #333 !important;
+}
